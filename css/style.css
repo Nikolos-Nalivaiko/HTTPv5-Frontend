@@ -143,24 +143,24 @@ body {
   transition: .3s;
   cursor: pointer
 }
-.menu__item:hover {
+.menu__item-title:hover {
   color: #5bb318;
   transition: .3s
 }
-.menu__item:not(:last-child):not(:nth-last-child(2)) {
+.menu__item:not(:last-child) {
   border-right: 1px solid #dbdbdb
 }
-.menu__item svg {
+.menu__item-icon {
   width: .75rem;
   height: .75rem;
-  margin-left: 15px;
+  margin-left: .9375rem;
   -webkit-transform: rotate(0);
   transform: rotate(0);
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s,-webkit-transform .3s
 }
-.menu__item.active svg {
+.menu__item.active .menu__item-icon {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   transition: -webkit-transform .3s;
@@ -171,7 +171,7 @@ body {
   display: none;
   padding: .5625rem;
   border: 1px solid #dbdbdb;
-  border-radius: 5px;
+  border-radius: .3125rem;
   line-height: 0
 }
 .icon-menu svg {
@@ -237,10 +237,10 @@ h1 {
 .dropdown.active {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 1.5625rem;
   opacity: 1;
   height: auto;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   transition: opacity .3s ease-in
 }
 .dropdown__block:not(:last-child) {
@@ -250,20 +250,20 @@ h1 {
 .dropdown__block-link {
   display: flex;
   align-items: start;
-  border-radius: 10px;
+  border-radius: .625rem;
   transition: .3s
 }
 .dropdown__title {
   font-size: 1.125rem;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: .3125rem;
   transition: .3s
 }
 .dropdown__subtitle {
   color: #272829
 }
 .dropdown__icon {
-  border-radius: 50px;
+  border-radius: 3.125rem;
   border: 1px solid #dbdbdb;
   padding: .9375rem;
   line-height: 0;
@@ -281,14 +281,14 @@ h1 {
 .header__btns {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 2.1875rem;
   font-weight: 700
 }
 .header__btns_mobile {
   display: none
 }
 .header__btn-signup {
-  width: 180px;
+  width: 11.25rem;
   padding: 1.125rem;
   background-color: #5bb318;
   color: #fff;
@@ -320,29 +320,29 @@ h1 {
     position: absolute;
     top: 3.4375rem;
     left: 0;
-    border-radius: 10px;
+    border-radius: .625rem;
     border: 1px solid #dbdbdb;
     background: #fff;
     padding: 1.5625rem;
     width: 32.8125rem;
     max-height: 0;
-    padding: 0 25px;
+    padding: 0 1.5625rem;
     transition: max-height .3s ease-in,opacity .3s ease-in,padding .3s ease-in
   }
   .dropdown.active {
-    max-height: 500px;
+    max-height: 31.25rem;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 1.5625rem;
     opacity: 1;
-    padding: 25px;
+    padding: 1.5625rem;
     margin-top: 0;
     transition: max-height .3s ease-in,opacity .3s ease-in,padding .3s ease-in
   }
   .dropdown__block-link {
     padding-top: .9375rem;
     padding-right: .9375rem;
-    padding-left: 15px;
+    padding-left: .9375rem;
     padding-bottom: .9375rem
   }
   .dropdown__block-link:hover {
@@ -364,7 +364,7 @@ h1 {
   .menu__list {
     gap: 2.8125rem
   }
-  .menu__item:not(:last-child):not(:nth-last-child(2)) {
+  .menu__item:not(:last-child) {
     padding-right: 2.8125rem
   }
   h1 {
@@ -419,7 +419,7 @@ h1 {
   }
 }
 @media (max-width:48em) {
-  .menu__item:not(:last-child):not(:nth-last-child(2)) {
+  .menu__item:not(:last-child) {
     padding-right: 1.5625rem
   }
   .hero__image {
@@ -479,7 +479,7 @@ h1 {
     top: 0;
     background-color: #fff;
     overflow: auto;
-    padding: 1.875rem .9375rem .9375rem 1.875rem;
+    padding: 1.875rem .9375rem 1.875rem .9375rem;
     transition: left .3s
   }
   .menu-open .menu__body {
@@ -505,20 +505,20 @@ h1 {
     font-size: 1.25rem;
     width: 100%
   }
-  .menu__item p {
+  .menu__item-title {
     display: flex;
     align-items: center;
     justify-content: space-between
   }
-  .menu__item:not(:last-child):not(:nth-last-child(2)) {
+  .menu__item:not(:last-child) {
     padding-right: 0;
     border-right: none
   }
   .menu__item:not(:first-child) {
-    margin-top: 30px
+    margin-top: 1.875rem
   }
-  .menu__item.active {
-    padding-bottom: 20px;
+  .menu__item.active .menu__item-title {
+    padding-bottom: 1.25rem;
     border-bottom: 1px solid #dbdbdb
   }
   .icon-menu {
@@ -534,14 +534,14 @@ h1 {
   .header__btns_mobile {
     margin-top: 2.8125rem;
     border-top: 1px solid #dbdbdb;
-    padding-top: 25px;
+    padding-top: 1.5625rem;
     display: flex
   }
 }
 @media (max-width:29.99875em) {
   .header__btns_mobile {
     flex-direction: column-reverse;
-    gap: 25px;
+    gap: 1.5625rem;
     align-items: start
   }
   .header__btn-signup {
@@ -558,7 +558,7 @@ h1 {
   }
 }
 @media (min-width:48em)and (max-width:94.375em) {
-  .menu__item:not(:last-child):not(:nth-last-child(2)) {
+  .menu__item:not(:last-child) {
     padding-right: clamp(1.5625rem ,.2686994609rem + 2.6954177898vw ,2.8125rem)
   }
   .hero__image {

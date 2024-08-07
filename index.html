@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240807213947">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240807223006">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,89 +36,85 @@
 						</div>
 
 						<ul class="menu__list">
-
 							<li class="menu__item">
-								<a href="index.html">Головна</a>
+								<a href="index.html" class="menu__item-title">Головна</a>
 							</li>
 							<li class="menu__item">
-								<p data-target="dropdown1">
+								<p class="menu__item-title" data-target="dropdown1">
 									Вантажі
-									<svg>
+									<svg class="menu__item-icon">
 										<use xlink:href="img/icons/icons.svg#IconArrowOpen"></use>
 									</svg>
 								</p>
+								<div class="dropdown" id="dropdown1">
+									<div class="dropdown__block">
+										<a href="" class="dropdown__block-link">
+											<div class="dropdown__icon">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#IconCargoAdd"></use>
+												</svg>
+											</div>
+											<div class="dropdown__text">
+												<p class="dropdown__title">Додати вантаж</p>
+												<p class="dropdown__subtitle">Заповніть дані про вантаж у цьому розділі, щоб додати його до біржи вантажів</p>
+											</div>
+										</a>
+									</div>
+
+									<div class="dropdown__block">
+										<a href="" class="dropdown__block-link">
+											<div class="dropdown__icon">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#IconCargos"></use>
+												</svg>
+											</div>
+											<div class="dropdown__text">
+												<p class="dropdown__title">Біржа вантажів</p>
+												<p class="dropdown__subtitle">Переглядайте та знаходьте вантажі для транспортування у цьому розділі</p>
+											</div>
+										</a>
+									</div>
+								</div>
 							</li>
-
-							<div class="dropdown" id="dropdown1">
-								<div class="dropdown__block">
-									<a href="" class="dropdown__block-link">
-										<div class="dropdown__icon">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#IconCargoAdd"></use>
-											</svg>
-										</div>
-										<div class="dropdown__text">
-											<p class="dropdown__title">Додати вантаж</p>
-											<p class="dropdown__subtitle">Заповніть дані про вантаж у цьому розділі, щоб додати його до біржи вантажів</p>
-										</div>
-									</a>
-								</div>
-
-								<div class="dropdown__block">
-									<a href="" class="dropdown__block-link">
-										<div class="dropdown__icon">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#IconCargos"></use>
-											</svg>
-										</div>
-										<div class="dropdown__text">
-											<p class="dropdown__title">Біржа вантажів</p>
-											<p class="dropdown__subtitle">Переглядайте та знаходьте вантажі для транспортування у цьому розділі</p>
-										</div>
-									</a>
-								</div>
-							</div>
-
 							<li class="menu__item">
-								<p data-target="dropdown2">
+								<p class="menu__item-title" data-target="dropdown2">
 									Транспорт
-									<svg>
+									<svg class="menu__item-icon">
 										<use xlink:href="img/icons/icons.svg#IconArrowOpen"></use>
 									</svg>
 								</p>
+								<div class="dropdown" id="dropdown2">
+									<div class="dropdown__block">
+										<a href="" class="dropdown__block-link">
+											<div class="dropdown__icon">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#IconTruckAdd"></use>
+												</svg>
+											</div>
+											<div class="dropdown__text">
+												<p class="dropdown__title">Додати транспорт</p>
+												<p class="dropdown__subtitle">Заповніть дані про транспорт у цьому розділі, щоб додати його до біржи транспорту</p>
+											</div>
+										</a>
+									</div>
+
+									<div class="dropdown__block">
+										<a href="" class="dropdown__block-link">
+											<div class="dropdown__icon">
+												<svg>
+													<use xlink:href="img/icons/icons.svg#IconTrucks"></use>
+												</svg>
+											</div>
+											<div class="dropdown__text">
+												<p class="dropdown__title">Біржа транспорту</p>
+												<p class="dropdown__subtitle">Переглядайте та знаходьте транспортні засоби для перевезення вантажів</p>
+											</div>
+										</a>
+									</div>
+								</div>
 							</li>
-
-							<div class="dropdown" id="dropdown2">
-								<div class="dropdown__block">
-									<a href="" class="dropdown__block-link">
-										<div class="dropdown__icon">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#IconTruckAdd"></use>
-											</svg>
-										</div>
-										<div class="dropdown__text">
-											<p class="dropdown__title">Додати транспорт</p>
-											<p class="dropdown__subtitle">Заповніть дані про транспорт у цьому розділі, щоб додати його до біржи транспорту</p>
-										</div>
-									</a>
-								</div>
-
-								<div class="dropdown__block">
-									<a href="" class="dropdown__block-link">
-										<div class="dropdown__icon">
-											<svg>
-												<use xlink:href="img/icons/icons.svg#IconTrucks"></use>
-											</svg>
-										</div>
-										<div class="dropdown__text">
-											<p class="dropdown__title">Біржа транспорту</p>
-											<p class="dropdown__subtitle">Переглядайте та знаходьте транспортні засоби для перевезення вантажів</p>
-										</div>
-									</a>
-								</div>
-							</div>
-
 						</ul>
+
 
 						<div class="header__btns header__btns_mobile">
 							<a href="" class="header__btn-signin">Вхід</a>
@@ -168,7 +164,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240807213947"></script>
+	<script src="js/app.min.js?_v=20240807223006"></script>
 </body>
 
 </html>
