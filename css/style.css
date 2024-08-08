@@ -207,6 +207,12 @@ body {
 h1 {
   font-weight: 700
 }
+h2 {
+  font-weight: 700
+}
+h4 {
+  font-weight: 700
+}
 .btn {
   width: 15.625rem;
   padding: 1.25rem;
@@ -232,7 +238,9 @@ h1 {
   overflow: hidden;
   opacity: 0;
   max-height: 0;
-  transition: opacity .2s ease-in,max-height .2s ease-in
+  transition: opacity .3s ease-in;
+  background-color: #fff;
+  z-index: 10
 }
 .dropdown.active {
   display: flex;
@@ -241,7 +249,7 @@ h1 {
   opacity: 1;
   max-height: 15.625rem;
   margin-top: 1.25rem;
-  transition: opacity .3s ease-in,max-height .3s ease-in
+  transition: opacity .3s ease-in
 }
 .dropdown__block:not(:last-child) {
   padding-bottom: 1.5625rem;
@@ -267,6 +275,36 @@ h1 {
   border: 1px solid #dbdbdb;
   padding: .9375rem;
   line-height: 0;
+  transition: .3s
+}
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+.section__header-subtitle {
+  color: #272829
+}
+.section__header-text {
+  max-width: 34.0625rem
+}
+.arrows-slider {
+  display: flex;
+  align-items: center;
+  gap: 25px
+}
+.arrow-slider {
+  cursor: pointer;
+  border-radius: 3.125rem;
+  border: 1px solid #dbdbdb;
+  color: #dbdbdb;
+  line-height: 0;
+  transition: .3s
+}
+.arrow-slider:hover {
+  color: #5bb318;
+  border-color: #5bb318;
   transition: .3s
 }
 .header {
@@ -297,8 +335,7 @@ h1 {
 }
 .hero {
   display: flex;
-  justify-content: space-between;
-  gap: 55px
+  justify-content: space-between
 }
 .hero__inner {
   max-width: 43.4375rem
@@ -309,11 +346,81 @@ h1 {
 .hero__btns {
   display: flex;
   align-items: center;
-  gap: 30px
+  flex-wrap: wrap
+}
+.hero__image {
+  position: relative;
+  overflow: hidden
 }
 .hero__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   -o-object-fit: cover;
   object-fit: cover
+}
+.service__block {
+  border: 1px solid #dbdbdb;
+  border-radius: .625rem;
+  transition: .3s;
+  overflow: hidden
+}
+.service__block:hover {
+  border-color: #5bb318;
+  transition: .3s
+}
+.service__block-image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%
+}
+.service__block-title {
+  margin-bottom: .3125rem
+}
+.service__block-subtitle {
+  color: #272829;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #dbdbdb
+}
+.service__block-description {
+  color: #272829
+}
+.service__block-btn {
+  width: 100%
+}
+.service__block-btn:hover {
+  background-color: #5bb318;
+  border-color: #5bb318
+}
+.swiper {
+  overflow: hidden
+}
+.swiper-initialized {
+  touch-action: pan-y
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  display: flex;
+  position: relative
+}
+.swiper-vertical .swiper-wrapper {
+  flex-direction: column
+}
+.swiper-autoheight .swiper-wrapper {
+  align-items: flex-start
+}
+.swiper-initialized .swiper-slide {
+  flex-shrink: 0
+}
+.swiper-android .swiper-slide,
+.swiper-android .swiper-wrapper {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0)
+}
+.swiper-button-lock {
+  display: none!important
 }
 @media (min-width:61.99875em) {
   .dropdown {
@@ -370,6 +477,12 @@ h1 {
   h1 {
     font-size: 4.5rem
   }
+  h2 {
+    font-size: 3.5rem
+  }
+  h4 {
+    font-size: 1.875rem
+  }
   .logo {
     height: 3.75rem
   }
@@ -388,6 +501,24 @@ h1 {
   .dropdown__icon svg {
     height: 1.875rem
   }
+  .section__header {
+    margin-bottom: 3.125rem
+  }
+  .section__header {
+    gap: 3.4375rem
+  }
+  .section__header-subtitle {
+    font-size: 1.125rem
+  }
+  .arrow-slider {
+    padding: 1.5625rem
+  }
+  .arrow-slider svg {
+    width: 1.875rem
+  }
+  .arrow-slider svg {
+    height: 1.875rem
+  }
   .header {
     padding-top: 2.1875rem
   }
@@ -400,6 +531,12 @@ h1 {
   .hero {
     margin-top: 2.5rem
   }
+  .hero {
+    gap: 3.4375rem
+  }
+  .hero {
+    margin-bottom: 9.375rem
+  }
   .hero__inner {
     margin-top: 5rem
   }
@@ -409,8 +546,29 @@ h1 {
   .hero__subtitle {
     font-size: 1.25rem
   }
+  .hero__btns {
+    gap: 1.875rem
+  }
   .hero__image {
     width: 48rem
+  }
+  .hero__image {
+    height: 35.3125rem
+  }
+  .service__block-image img {
+    height: 11.5625rem
+  }
+  .service__block-inner {
+    padding: 1.5625rem
+  }
+  .service__block-subtitle {
+    margin-bottom: 1.25rem
+  }
+  .service__block-description {
+    margin-bottom: 1.25rem
+  }
+  .service__block-description {
+    font-size: 1.125rem
   }
 }
 @media (max-width:62em) {
@@ -422,13 +580,25 @@ h1 {
   .menu__item:not(:last-child) {
     padding-right: 1.5625rem
   }
+  .hero {
+    gap: .9375rem
+  }
   .hero__image {
-    width: 18.75rem
+    width: 15.625rem
+  }
+  .hero__image {
+    height: 24.375rem
   }
 }
 @media (max-width:20em) {
   h1 {
     font-size: 2.625rem
+  }
+  h2 {
+    font-size: 2rem
+  }
+  h4 {
+    font-size: 1.5rem
   }
   .logo {
     height: 3rem
@@ -448,6 +618,24 @@ h1 {
   .dropdown__icon svg {
     height: 1.25rem
   }
+  .section__header {
+    margin-bottom: 2.5rem
+  }
+  .section__header {
+    gap: 1.5625rem
+  }
+  .section__header-subtitle {
+    font-size: 1rem
+  }
+  .arrow-slider {
+    padding: 1.25rem
+  }
+  .arrow-slider svg {
+    width: 1.5625rem
+  }
+  .arrow-slider svg {
+    height: 1.5625rem
+  }
   .header {
     padding-top: 1.875rem
   }
@@ -460,6 +648,9 @@ h1 {
   .hero {
     margin-top: 2.8125rem
   }
+  .hero {
+    margin-bottom: 5.3125rem
+  }
   .hero__inner {
     margin-top: .0000000625rem
   }
@@ -467,6 +658,24 @@ h1 {
     margin-bottom: 1.5625rem
   }
   .hero__subtitle {
+    font-size: 1rem
+  }
+  .hero__btns {
+    gap: 1.25rem
+  }
+  .service__block-image img {
+    height: 10.3125rem
+  }
+  .service__block-inner {
+    padding: 1.25rem
+  }
+  .service__block-subtitle {
+    margin-bottom: .9375rem
+  }
+  .service__block-description {
+    margin-bottom: .9375rem
+  }
+  .service__block-description {
     font-size: 1rem
   }
 }
@@ -534,7 +743,15 @@ h1 {
     display: flex
   }
 }
+@media (max-width:47.99875em) {
+  .hero__image {
+    display: none
+  }
+}
 @media (max-width:29.99875em) {
+  .btn {
+    width: 100%
+  }
   .header__btns_mobile {
     flex-direction: column-reverse;
     gap: 1.5625rem;
@@ -557,13 +774,25 @@ h1 {
   .menu__item:not(:last-child) {
     padding-right: clamp(1.5625rem ,.2686994609rem + 2.6954177898vw ,2.8125rem)
   }
+  .hero {
+    gap: clamp(.9375rem ,-1.6501010782rem + 5.3908355795vw ,3.4375rem)
+  }
   .hero__image {
-    width: clamp(18.75rem ,-11.5249326146rem + 63.0727762803vw ,48rem)
+    width: clamp(15.625rem ,-17.8844339623rem + 69.8113207547vw ,48rem)
+  }
+  .hero__image {
+    height: clamp(24.375rem ,13.054245283rem + 23.5849056604vw ,35.3125rem)
   }
 }
 @media (min-width:20em)and (max-width:94.375em) {
   h1 {
     font-size: clamp(2.625rem ,2.1207983193rem + 2.5210084034vw ,4.5rem)
+  }
+  h2 {
+    font-size: clamp(2rem ,1.5966386555rem + 2.0168067227vw ,3.5rem)
+  }
+  h4 {
+    font-size: clamp(1.5rem ,1.3991596639rem + .5042016807vw ,1.875rem)
   }
   .logo {
     height: clamp(3rem ,2.7983193277rem + 1.0084033613vw ,3.75rem)
@@ -583,6 +812,24 @@ h1 {
   .dropdown__icon svg {
     height: clamp(1.25rem ,1.0819327731rem + .8403361345vw ,1.875rem)
   }
+  .section__header {
+    margin-bottom: clamp(2.5rem ,2.3319327731rem + .8403361345vw ,3.125rem)
+  }
+  .section__header {
+    gap: clamp(1.5625rem ,1.0582983193rem + 2.5210084034vw ,3.4375rem)
+  }
+  .section__header-subtitle {
+    font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
+  }
+  .arrow-slider {
+    padding: clamp(1.25rem ,1.1659663866rem + .4201680672vw ,1.5625rem)
+  }
+  .arrow-slider svg {
+    width: clamp(1.5625rem ,1.4784663866rem + .4201680672vw ,1.875rem)
+  }
+  .arrow-slider svg {
+    height: clamp(1.5625rem ,1.4784663866rem + .4201680672vw ,1.875rem)
+  }
   .header {
     padding-top: clamp(1.875rem ,1.7909663866rem + .4201680672vw ,2.1875rem)
   }
@@ -595,6 +842,9 @@ h1 {
   .hero {
     margin-top: clamp(2.5rem ,2.8965336134rem + -.4201680672vw ,2.8125rem)
   }
+  .hero {
+    margin-bottom: clamp(5.3125rem ,4.2200630252rem + 5.4621848739vw ,9.375rem)
+  }
   .hero__inner {
     margin-top: clamp(.0000000625rem ,-1.3445377358rem + 6.7226889916vw ,5rem)
   }
@@ -603,5 +853,23 @@ h1 {
   }
   .hero__subtitle {
     font-size: clamp(1rem ,.9327731092rem + .3361344538vw ,1.25rem)
+  }
+  .hero__btns {
+    gap: clamp(1.25rem ,1.0819327731rem + .8403361345vw ,1.875rem)
+  }
+  .service__block-image img {
+    height: clamp(10.3125rem ,9.9763655462rem + 1.6806722689vw ,11.5625rem)
+  }
+  .service__block-inner {
+    padding: clamp(1.25rem ,1.1659663866rem + .4201680672vw ,1.5625rem)
+  }
+  .service__block-subtitle {
+    margin-bottom: clamp(.9375rem ,.8534663866rem + .4201680672vw ,1.25rem)
+  }
+  .service__block-description {
+    margin-bottom: clamp(.9375rem ,.8534663866rem + .4201680672vw ,1.25rem)
+  }
+  .service__block-description {
+    font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
   }
 }
