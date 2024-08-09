@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240809142216">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240809175623">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,50 @@
 
 <body>
 	<div class="wrapper">
+		<div id="popup-success" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content alert__content">
+
+					<div class="alert__text">
+						<div class="alert__icon-wrapper alert__icon-wrapper_success">
+							<div class="alert__icon alert__icon_success">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#IconSuccess"></use>
+								</svg>
+							</div>
+						</div>
+
+						<h4 class="alert__title">Профіль створено</h4>
+						<p class="alert__subtitle">Профіль створено - ви на крок ближче до нових можливостей</p>
+						<button data-close class="alert__btn btn btn_light">Закрити</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-error" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content alert__content">
+
+					<div class="alert__text">
+						<div class="alert__icon-wrapper alert__icon-wrapper_error">
+							<div class="alert__icon alert__icon_error">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#IconClose(Error)"></use>
+								</svg>
+							</div>
+						</div>
+
+						<h4 class="alert__title">Виникла помилка</h4>
+						<p class="alert__subtitle">Будь ласка, перевірте введені дані</p>
+						<button data-close class="alert__btn btn btn_light">Закрити</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
 		<header class="header">
 			<div class="header__container">
 				<a href="index.html">
@@ -146,7 +190,7 @@
 					<p class="section__header-subtitle">Зареєструйтеся, щоб отримати доступ до безмежних можливостей у світі перевезень та оренди транспорту</p>
 				</div>
 
-				<form action="" method="post" class="sign-up__form">
+				<form action="" onsubmit="event.preventDefault();" method="post" class="sign-up__form">
 
 					<div class="input__wrapper">
 						<div class="input__icon">
@@ -311,7 +355,7 @@
 					</div>
 
 					<div class="form__footer">
-						<button type="submit" class="btn btn_green btn_big">Зареєструватись</button>
+						<button type="submit" data-popup="#popup-success" class="btn btn_green btn_big">Зареєструватись</button>
 						<p class="form__footer-description">Реєструючи профіл, ви погоджуєтесь з правилами нашої платформи. Ми цінуємо вашу співпрацю у дотриманні стандартів якості нашої спільноти</p>
 					</div>
 
@@ -360,7 +404,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240809142216"></script>
+	<script src="js/app.min.js?_v=20240809175623"></script>
 </body>
 
 </html>
