@@ -329,14 +329,15 @@ h4 {
 .input {
   margin-bottom: .3125rem;
   font-weight: 700;
-  width: 100%
+  width: 100%;
+  font-size: 1.125rem
 }
 .input:focus-within {
   outline: 0
 }
 .input__wrapper {
   border: 1px solid #dbdbdb;
-  border-radius: 10px;
+  border-radius: .625rem;
   display: flex;
   align-items: center;
   gap: 1.5625rem;
@@ -378,8 +379,6 @@ h4 {
   line-height: 0
 }
 .input__icon-eye svg {
-  width: 1.5625rem;
-  height: 1.5625rem;
   color: #c8c8c8;
   transition: .3s
 }
@@ -793,9 +792,6 @@ h4 {
   .arrow-slider svg {
     height: 1.875rem
   }
-  .input {
-    font-size: 1.125rem
-  }
   .input__wrapper {
     padding-top: 1.25rem
   }
@@ -810,6 +806,12 @@ h4 {
   }
   .input__label {
     font-size: 1rem
+  }
+  .input__icon-eye svg {
+    width: 1.5625rem
+  }
+  .input__icon-eye svg {
+    height: 1.5625rem
   }
   .checkbox-label {
     font-size: 1.125rem
@@ -971,10 +973,10 @@ h4 {
 }
 @media (max-width:20em) {
   h1 {
-    font-size: 2.625rem
+    font-size: 2.75rem
   }
   h2 {
-    font-size: 2rem
+    font-size: 2.375rem
   }
   h4 {
     font-size: 1.5rem
@@ -1024,9 +1026,6 @@ h4 {
   .arrow-slider svg {
     height: 1.5625rem
   }
-  .input {
-    font-size: 1rem
-  }
   .input__wrapper {
     padding-top: .9375rem
   }
@@ -1041,6 +1040,12 @@ h4 {
   }
   .input__label {
     font-size: .875rem
+  }
+  .input__icon-eye svg {
+    width: 1.125rem
+  }
+  .input__icon-eye svg {
+    height: 1.125rem
   }
   .checkbox-label {
     font-size: 1rem
@@ -1134,7 +1139,8 @@ h4 {
     background-color: #fff;
     overflow: auto;
     padding: 1.875rem .9375rem 1.875rem .9375rem;
-    transition: left .3s
+    transition: left .3s;
+    z-index: 20
   }
   .menu-open .menu__body {
     left: 0
@@ -1274,10 +1280,10 @@ h4 {
 }
 @media (min-width:20em)and (max-width:94.375em) {
   h1 {
-    font-size: clamp(2.625rem ,2.1207983193rem + 2.5210084034vw ,4.5rem)
+    font-size: clamp(2.75rem ,2.2794117647rem + 2.3529411765vw ,4.5rem)
   }
   h2 {
-    font-size: clamp(2rem ,1.5966386555rem + 2.0168067227vw ,3.5rem)
+    font-size: clamp(2.375rem ,2.0724789916rem + 1.512605042vw ,3.5rem)
   }
   h4 {
     font-size: clamp(1.5rem ,1.3991596639rem + .5042016807vw ,1.875rem)
@@ -1327,9 +1333,6 @@ h4 {
   .arrow-slider svg {
     height: clamp(1.5625rem ,1.4784663866rem + .4201680672vw ,1.875rem)
   }
-  .input {
-    font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
-  }
   .input__wrapper {
     padding-top: clamp(.9375rem ,.8534663866rem + .4201680672vw ,1.25rem)
   }
@@ -1344,6 +1347,12 @@ h4 {
   }
   .input__label {
     font-size: clamp(.875rem ,.8413865546rem + .1680672269vw ,1rem)
+  }
+  .input__icon-eye svg {
+    width: clamp(1.125rem ,1.0073529412rem + .5882352941vw ,1.5625rem)
+  }
+  .input__icon-eye svg {
+    height: clamp(1.125rem ,1.0073529412rem + .5882352941vw ,1.5625rem)
   }
   .checkbox-label {
     font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
