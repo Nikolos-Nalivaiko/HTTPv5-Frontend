@@ -211,6 +211,9 @@ h1 {
 h2 {
   font-weight: 700
 }
+h3 {
+  font-weight: 700
+}
 h4 {
   font-weight: 700
 }
@@ -289,7 +292,8 @@ h4 {
   flex-wrap: wrap
 }
 .section__header-subtitle {
-  color: #272829
+  color: #272829;
+  margin-top: .3125rem
 }
 .section__header-text {
   max-width: 34.0625rem
@@ -361,6 +365,8 @@ h4 {
   margin-bottom: .3125rem
 }
 .input__inner {
+  display: flex;
+  flex-direction: column;
   padding-left: 1.5625rem;
   border-left: 1px solid #dbdbdb;
   width: 100%
@@ -385,6 +391,57 @@ h4 {
 .input__icon-eye svg:hover {
   color: #5bb318;
   transition: .3s
+}
+.select {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #101722
+}
+.select:focus-within {
+  outline: 0
+}
+.select__option {
+  font-weight: 400;
+  font-size: 1rem
+}
+.file {
+  display: inline-block;
+  grid-column: 1/-1
+}
+.file input[type=file] {
+  display: none
+}
+.file label {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px dashed #dbdbdb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: .3s
+}
+.file label:hover {
+  background-color: rgba(91,179,24,.1176470588);
+  border-color: #5bb318;
+  transition: .3s
+}
+.file label:hover .file__icon {
+  color: #5bb318;
+  transition: .3s
+}
+.file__icon {
+  color: #959595;
+  margin-bottom: .9375rem;
+  transition: .3s;
+  line-height: 0
+}
+.file__title {
+  color: #272829;
+  margin-bottom: 10px
+}
+.file__subtitle {
+  color: #5f5f5f
 }
 .custom-checkbox {
   display: inline-flex;
@@ -417,6 +474,47 @@ h4 {
 }
 .checkbox-label {
   margin-left: 15px
+}
+.form-image {
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  overflow: hidden;
+  position: relative
+}
+.form-image__close {
+  position: absolute;
+  display: inline-block;
+  color: #5f5f5f;
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  line-height: 0;
+  transition: .3s;
+  cursor: pointer
+}
+.form-image__close svg {
+  width: .9375rem;
+  height: .9375rem
+}
+.form-image__close:hover {
+  color: #5bb318;
+  transition: .3s
+}
+.form-image_single {
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: center
+}
+.form__footer {
+  padding-top: 35px;
+  border-top: 1px solid #dbdbdb;
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap
+}
+.form__footer-description {
+  color: #272829
 }
 .header {
   position: relative;
@@ -656,6 +754,48 @@ h4 {
   color: #5bb318;
   font-weight: 700
 }
+.select__blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.875rem
+}
+.select__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #dbdbdb;
+  border-radius: .625rem;
+  transition: .3s
+}
+.select__block:hover {
+  border-color: #5bb318;
+  transition: .3s
+}
+.select__block:hover .select__icon {
+  color: #5bb318;
+  transition: .3s
+}
+.select__block-title {
+  margin-bottom: .3125rem
+}
+.select__block-subtitle {
+  color: #272829;
+  margin-bottom: 1.25rem
+}
+.select__block-description {
+  padding-top: 1.25rem;
+  border-top: 1px solid #dbdbdb;
+  color: #272829;
+  text-align: center
+}
+.select__icon {
+  color: #c8c8c8;
+  transition: .3s
+}
+.sign-up__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(21.875rem,1fr))
+}
 .swiper {
   overflow: hidden
 }
@@ -744,6 +884,9 @@ h4 {
   h2 {
     font-size: 3.5rem
   }
+  h3 {
+    font-size: 1.875rem
+  }
   h4 {
     font-size: 1.875rem
   }
@@ -755,6 +898,9 @@ h4 {
   }
   .btn {
     font-size: 1.125rem
+  }
+  .btn_big {
+    width: 29.375rem
   }
   .dropdown__block-link {
     gap: 1.5625rem
@@ -813,8 +959,38 @@ h4 {
   .input__icon-eye svg {
     height: 1.5625rem
   }
+  .file label {
+    padding: 2.5rem
+  }
+  .file__icon svg {
+    width: 2.1875rem
+  }
+  .file__icon svg {
+    height: 2.1875rem
+  }
+  .file__title {
+    font-size: 1.125rem
+  }
+  .file__subtitle {
+    font-size: 1rem
+  }
   .checkbox-label {
     font-size: 1.125rem
+  }
+  .form-image img {
+    width: 13.75rem
+  }
+  .form-image img {
+    height: 13.75rem
+  }
+  .form-image__close {
+    top: .9375rem
+  }
+  .form-image__close {
+    right: .9375rem
+  }
+  .form__footer-description {
+    max-width: 37.1875rem
   }
   .header {
     padding-top: 2.1875rem
@@ -927,6 +1103,35 @@ h4 {
   .sign-in__goto {
     font-size: 1.125rem
   }
+  .select__blocks {
+    margin-top: 3.125rem
+  }
+  .select__block {
+    padding: 2.5rem
+  }
+  .select__block-description {
+    font-size: 1.125rem
+  }
+  .select__icon {
+    margin-bottom: 2.5rem
+  }
+  .select__icon svg {
+    width: 5.3125rem
+  }
+  .select__icon svg {
+    height: 5.3125rem
+  }
+  .sign-up__form {
+    gap: 1.875rem
+  }
+  .sign-up__form {
+    margin-top: 2.8125rem
+  }
+}
+@media (min-width:48em) {
+  .form__footer {
+    gap: 1.875rem
+  }
 }
 @media (max-width:62em) {
   .menu__list {
@@ -936,6 +1141,12 @@ h4 {
 @media (max-width:48em) {
   .menu__item:not(:last-child) {
     padding-right: 1.5625rem
+  }
+  .btn_big {
+    width: 18.75rem
+  }
+  .form__footer-description {
+    max-width: 21.875rem
   }
   .hero {
     gap: .9375rem
@@ -977,6 +1188,9 @@ h4 {
   }
   h2 {
     font-size: 2.375rem
+  }
+  h3 {
+    font-size: 1.75rem
   }
   h4 {
     font-size: 1.5rem
@@ -1047,8 +1261,38 @@ h4 {
   .input__icon-eye svg {
     height: 1.125rem
   }
+  .file label {
+    padding: 2.1875rem
+  }
+  .file__icon svg {
+    width: 1.875rem
+  }
+  .file__icon svg {
+    height: 1.875rem
+  }
+  .file__title {
+    font-size: 1rem
+  }
+  .file__subtitle {
+    font-size: .875rem
+  }
   .checkbox-label {
     font-size: 1rem
+  }
+  .form-image img {
+    width: 10rem
+  }
+  .form-image img {
+    height: 10rem
+  }
+  .form-image__close {
+    top: .625rem
+  }
+  .form-image__close {
+    right: .625rem
+  }
+  .form__footer {
+    gap: 1.5625rem
   }
   .header {
     padding-top: 1.875rem
@@ -1128,6 +1372,30 @@ h4 {
   .sign-in__goto {
     font-size: 1rem
   }
+  .select__blocks {
+    margin-top: 2.1875rem
+  }
+  .select__block {
+    padding: 1.5625rem
+  }
+  .select__block-description {
+    font-size: 1rem
+  }
+  .select__icon {
+    margin-bottom: 1.5625rem
+  }
+  .select__icon svg {
+    width: 4.0625rem
+  }
+  .select__icon svg {
+    height: 4.0625rem
+  }
+  .sign-up__form {
+    gap: 1.5625rem
+  }
+  .sign-up__form {
+    margin-top: 1.875rem
+  }
 }
 @media (max-width:61.99875em) {
   .menu__body {
@@ -1195,6 +1463,13 @@ h4 {
   }
 }
 @media (max-width:47.99875em) {
+  .btn_big {
+    width: 100%
+  }
+  .form__footer-description {
+    text-align: center;
+    max-width: 100%
+  }
   .hero__image {
     display: none
   }
@@ -1217,6 +1492,9 @@ h4 {
   .sign-in__image {
     display: none
   }
+  .select__blocks {
+    flex-direction: column
+  }
 }
 @media (max-width:29.99875em) {
   .btn {
@@ -1234,6 +1512,9 @@ h4 {
     width: 100%;
     text-align: center
   }
+  .sign-up__form {
+    grid-template-columns: repeat(1,100%)
+  }
 }
 @media (min-width:62em)and (max-width:94.375em) {
   .menu__list {
@@ -1243,6 +1524,12 @@ h4 {
 @media (min-width:48em)and (max-width:94.375em) {
   .menu__item:not(:last-child) {
     padding-right: clamp(1.5625rem ,.2686994609rem + 2.6954177898vw ,2.8125rem)
+  }
+  .btn_big {
+    width: clamp(18.75rem ,7.7526954178rem + 22.9110512129vw ,29.375rem)
+  }
+  .form__footer-description {
+    max-width: clamp(21.875rem ,6.0259433962rem + 33.0188679245vw ,37.1875rem)
   }
   .hero {
     gap: clamp(.9375rem ,-1.6501010782rem + 5.3908355795vw ,3.4375rem)
@@ -1284,6 +1571,9 @@ h4 {
   }
   h2 {
     font-size: clamp(2.375rem ,2.0724789916rem + 1.512605042vw ,3.5rem)
+  }
+  h3 {
+    font-size: clamp(1.75rem ,1.7163865546rem + .1680672269vw ,1.875rem)
   }
   h4 {
     font-size: clamp(1.5rem ,1.3991596639rem + .5042016807vw ,1.875rem)
@@ -1354,8 +1644,35 @@ h4 {
   .input__icon-eye svg {
     height: clamp(1.125rem ,1.0073529412rem + .5882352941vw ,1.5625rem)
   }
+  .file label {
+    padding: clamp(2.1875rem ,2.1034663866rem + .4201680672vw ,2.5rem)
+  }
+  .file__icon svg {
+    width: clamp(1.875rem ,1.7909663866rem + .4201680672vw ,2.1875rem)
+  }
+  .file__icon svg {
+    height: clamp(1.875rem ,1.7909663866rem + .4201680672vw ,2.1875rem)
+  }
+  .file__title {
+    font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
+  }
+  .file__subtitle {
+    font-size: clamp(.875rem ,.8413865546rem + .1680672269vw ,1rem)
+  }
   .checkbox-label {
     font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
+  }
+  .form-image img {
+    width: clamp(10rem ,8.9915966387rem + 5.0420168067vw ,13.75rem)
+  }
+  .form-image img {
+    height: clamp(10rem ,8.9915966387rem + 5.0420168067vw ,13.75rem)
+  }
+  .form-image__close {
+    top: clamp(.625rem ,.5409663866rem + .4201680672vw ,.9375rem)
+  }
+  .form-image__close {
+    right: clamp(.625rem ,.5409663866rem + .4201680672vw ,.9375rem)
   }
   .header {
     padding-top: clamp(1.875rem ,1.7909663866rem + .4201680672vw ,2.1875rem)
@@ -1434,5 +1751,34 @@ h4 {
   }
   .sign-in__goto {
     font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
+  }
+  .select__blocks {
+    margin-top: clamp(2.1875rem ,1.9353991597rem + 1.2605042017vw ,3.125rem)
+  }
+  .select__block {
+    padding: clamp(1.5625rem ,1.3103991597rem + 1.2605042017vw ,2.5rem)
+  }
+  .select__block-description {
+    font-size: clamp(1rem ,.9663865546rem + .1680672269vw ,1.125rem)
+  }
+  .select__icon {
+    margin-bottom: clamp(1.5625rem ,1.3103991597rem + 1.2605042017vw ,2.5rem)
+  }
+  .select__icon svg {
+    width: clamp(4.0625rem ,3.7263655462rem + 1.6806722689vw ,5.3125rem)
+  }
+  .select__icon svg {
+    height: clamp(4.0625rem ,3.7263655462rem + 1.6806722689vw ,5.3125rem)
+  }
+  .sign-up__form {
+    gap: clamp(1.5625rem ,1.4784663866rem + .4201680672vw ,1.875rem)
+  }
+  .sign-up__form {
+    margin-top: clamp(1.875rem ,1.6228991597rem + 1.2605042017vw ,2.8125rem)
+  }
+}
+@media (min-width:20em)and (max-width:48em) {
+  .form__footer {
+    gap: clamp(1.5625rem ,1.3392857143rem + 1.1160714286vw ,1.875rem)
   }
 }

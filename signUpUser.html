@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Type Profile Page</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -138,151 +138,185 @@
 			</div>
 
 		</header>
-		<main>
+		<main class="page">
 
-			<section class="hero">
-				<div class="hero__container">
-					<div class="hero__inner">
-						<h1 class="hero__title">Відправляйся в подорож з нами</h1>
-						<p class="hero__subtitle">Інноваційний сервіс, який забезпечує ефективне та комфортне планування маршрутів, відкриваючи нові горизонти для ваших подорожей</p>
-						<div class="hero__btns">
-							<a href="" class="btn btn_green">Наші послуги</a>
-							<a href="" class="btn btn_light">Про платформу</a>
-						</div>
-					</div>
+			<section class="sign-up sign-up__container">
+				<div class="section__header-text">
+					<h2>Реєстрація профілю</h2>
+					<p class="section__header-subtitle">Зареєструйтеся, щоб отримати доступ до безмежних можливостей у світі перевезень та оренди транспорту</p>
 				</div>
 
-				<div class="hero__image">
-					<img src="img/heroSection/hero.webp" width="768" height="565" alt="Image">
-				</div>
-			</section>
+				<form action="" method="post" class="sign-up__form">
 
-			<section class="section_offset service service__container">
-				<div class="section__header">
-					<div class="section__header-text">
-						<h2>Наші послуги</h2>
-						<p class="section__header-subtitle">Ми пропонуємо вам не просто послуги, а найвищий ступінь задоволення ваших очікувань</p>
-					</div>
-					<div class="arrows-slider">
-						<div class="arrow-slider swiper-button-prev">
+					<div class="input__wrapper">
+						<div class="input__icon">
 							<svg>
-								<use xlink:href="img/icons/icons.svg#IconArrowLeft"></use>
+								<use xlink:href="img/icons/icons.svg#IconPassword"></use>
 							</svg>
 						</div>
-						<div class="arrow-slider swiper-button-next">
+						<div class="input__inner">
+							<label class="input__label" for="password">Ваш пароль</label>
+							<input type="password" id="password" class="input">
+						</div>
+						<div class="input__icon-eye">
 							<svg>
-								<use xlink:href="img/icons/icons.svg#IconArrowRight"></use>
+								<use xlink:href="img/icons/icons.svg#IconPasswordVisible"></use>
 							</svg>
 						</div>
 					</div>
-				</div>
 
-				<div class="service__slider swiper">
-					<div class="service__wrapper swiper-wrapper">
-
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg1.webp" alt="Image">
-								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Новий вантаж</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Маєте власний вантаж але не знаете як його перевезти? Просто додайте вантаж та очікуйте на відповід</p>
-									<a href="" class="btn btn_light service__block-btn">Додати вантаж</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg2.webp" alt="Image">
-								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Біржа вантажів</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Маєте власний транспорт але не знаете де знайти вантаж? Наша біржа допоможе вам з цим питанням</p>
-									<a href="" class="btn btn_light service__block-btn">Біржа вантажів</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg3.webp" alt="Image">
-								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Новий транспорт</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Хочете здавати транспорт в аренду? Просто додайте його на нашу платформу та очікуйте клієнтів</p>
-									<a href="" class="btn btn_light service__block-btn">Додати транспорт</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg4.webp" alt="Image">
-								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Біржа транспорту</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Хочете знайти транспорт в аренду? Наша транспортна біржа вам швидко та легко з цим питанням</p>
-									<a href="" class="btn btn_light service__block-btn">Біржа транспорту</a>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</section>
-
-			<section class="section_offset about about__container">
-				<div class="about__image">
-					<img src="img/aboutSection/about.webp" alt="Image" width="595">
-
-					<div class="about__icon">
-						<span>
+					<div class="input__wrapper">
+						<div class="input__icon">
 							<svg>
-								<use xlink:href="img/icons/icons.svg#IconCargos"></use>
+								<use xlink:href="img/icons/icons.svg#IconPassword"></use>
 							</svg>
-						</span>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="confirm">Повторіть ваш пароль</label>
+							<input type="password" id="confirm" class="input">
+						</div>
+						<div class="input__icon-eye">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconPasswordVisible"></use>
+							</svg>
+						</div>
 					</div>
 
-				</div>
-				<div class="about__text">
-					<h2 class="about__title">Логістична платформа для сучасного бізнесу</h2>
-					<p class="about__subtitle">Наша платформа революціонізує логістику, швидко й зручно з'єднуючи вантажовідправників і перевізників, спрощуючи організацію перевезень</p>
-
-					<div class="about__description">
-						<div class="about__users">
-							<img src="img/aboutSection/user1.webp" alt="User image">
-							<img src="img/aboutSection/user2.webp" alt="User image">
-							<img src="img/aboutSection/user3.webp" alt="User image">
-							<img src="img/aboutSection/user4.webp" alt="User image">
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconLogin"></use>
+							</svg>
 						</div>
+						<div class="input__inner">
+							<label class="input__label" for="login">Ваш логін</label>
+							<input type="text" id="login" class="input">
+						</div>
+					</div>
 
-						<div class="about__rating">
-							<div class="rating">
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconUserInput"></use>
+							</svg>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="name">Введіть ваше ім’я</label>
+							<input type="text" id="name" class="input">
+						</div>
+					</div>
+
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconUserInput"></use>
+							</svg>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="middleName">По-батькові</label>
+							<input type="text" id="name" class="input">
+						</div>
+					</div>
+
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconUserInput"></use>
+							</svg>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="lastName">Введіть ваше прізвище</label>
+							<input type="text" id="lastName" class="input">
+						</div>
+					</div>
+
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconMap"></use>
+							</svg>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="region">Оберіть вашу область</label>
+							<select name="region" id="region" class="select">
+								<option value="" class="select__option" hidden selected></option>
+								<option value="" class="select__option">Полтавська область</option>
+								<option value="" class="select__option">Тернопільська область</option>
+								<option value="" class="select__option">Миколаївська область</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconMap"></use>
+							</svg>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="city">Оберіть вашу область</label>
+							<select name="city" id="city" class="select">
+								<option value="" class="select__option" hidden selected></option>
+								<option value="" class="select__option">Полтава</option>
+								<option value="" class="select__option">Тернопіль</option>
+								<option value="" class="select__option">Миколаїв</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconPhone"></use>
+							</svg>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="phone">Введіть ваш номер телефону</label>
+							<input type="text" id="phone" class="input">
+						</div>
+					</div>
+
+					<div class="input__wrapper">
+						<div class="input__icon">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconMail"></use>
+							</svg>
+						</div>
+						<div class="input__inner">
+							<label class="input__label" for="email">Введіть ваш e-mail</label>
+							<input type="email" id="email" class="input">
+						</div>
+					</div>
+
+					<div class="file">
+						<label for="fileInput">
+							<div class="file__icon">
 								<svg>
-									<use xlink:href="img/icons/icons.svg#IconStar"></use>
+									<use xlink:href="img/icons/icons.svg#IconUpload"></use>
 								</svg>
-								<span>4,0</span>
 							</div>
-							<p class="about__rating-title">Оцінка користувачів</p>
+							<input type="file" id="fileInput">
+							<span class="file__title">Завантажте фото профілю</span>
+							<span class="file__subtitle">JPG, PNG, WEBP</span>
+						</label>
+					</div>
+
+					<div class="form-image form-image_single">
+						<img src="img/userFormImage.webp" alt="Image" class="form-image__image">
+						<div class="form-image__close">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconClose(Error)"></use>
+							</svg>
 						</div>
 					</div>
 
-					<div class="about__btns">
-						<a href="" class="btn btn_green">Наші послуги</a>
-						<a href="" class="btn btn_light">Про платформу</a>
+					<div class="form__footer">
+						<button type="submit" class="btn btn_green btn_big">Зареєструватись</button>
+						<p class="form__footer-description">Реєструючи профіл, ви погоджуєтесь з правилами нашої платформи. Ми цінуємо вашу співпрацю у дотриманні стандартів якості нашої спільноти</p>
 					</div>
 
-				</div>
+				</form>
+
 			</section>
 
 		</main>
