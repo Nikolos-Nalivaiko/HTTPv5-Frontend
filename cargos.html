@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Type Profile Page</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -154,153 +154,375 @@
 			</div>
 
 		</header>
-		<main>
+		<main class="page">
+			<section class="cargos cargos__container">
 
-			<section class="hero">
-				<div class="hero__container">
-					<div class="hero__inner">
-						<h1 class="hero__title">Відправляйся в подорож з нами</h1>
-						<p class="hero__subtitle">Інноваційний сервіс, який забезпечує ефективне та комфортне планування маршрутів, відкриваючи нові горизонти для ваших подорожей</p>
-						<div class="hero__btns">
-							<a href="" class="btn btn_green">Наші послуги</a>
-							<a href="" class="btn btn_light">Про платформу</a>
-						</div>
-					</div>
-				</div>
+				<h2>Біржа вантажів</h2>
 
-				<div class="hero__image">
-					<img src="img/heroSection/hero.webp" width="768" height="565" alt="Image">
-				</div>
-			</section>
+				<div class="search">
 
-			<section class="section_offset service service__container">
-				<div class="section__header">
-					<div class="section__header-text">
-						<h2>Наші послуги</h2>
-						<p class="section__header-subtitle">Ми пропонуємо вам не просто послуги, а найвищий ступінь задоволення ваших очікувань</p>
-					</div>
-					<div class="arrows-slider">
-						<div class="arrow-slider swiper-button-prev">
+					<div class="search__form-wrapper">
+						<form action="" method="post" class="search__form">
+							<input type="text" class="search__input" placeholder="Введіть назву вантажу">
+							<button type="submit" class="search__form-btn">Пошук</button>
+						</form>
+
+						<div class="search__filter">
 							<svg>
-								<use xlink:href="img/icons/icons.svg#IconArrowLeft"></use>
-							</svg>
-						</div>
-						<div class="arrow-slider swiper-button-next">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#IconArrowRight"></use>
+								<use xlink:href="img/icons/icons.svg#IconFilter"></use>
 							</svg>
 						</div>
 					</div>
+
+					<a href="" class="search__link">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#IconPlus"></use>
+						</svg>
+						Додати вантаж
+					</a>
+
 				</div>
 
-				<div class="service__slider swiper">
-					<div class="service__wrapper swiper-wrapper">
+				<h4 class="cargos__title">Знайдені вантажі<span>2,540 вантажа</span></h4>
 
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg1.webp" alt="Image">
+				<div class="cargos__list">
+
+					<div class="cargo-block">
+						<div class="cargo-block__header">
+
+							<div class="cargo-block__header-inner">
+								<p class="cargo-block__title">Медичне обладнання</p>
+
+								<div class="cargo-block__icons">
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconPremiumCargo"></use>
+										</svg>
+									</div>
+
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconUrgent"></use>
+										</svg>
+									</div>
 								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Новий вантаж</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Маєте власний вантаж але не знаете як його перевезти? Просто додайте вантаж та очікуйте на відповід</p>
-									<a href="" class="btn btn_light service__block-btn">Додати вантаж</a>
-								</div>
+							</div>
+
+							<ul class="cargo-block__info-list">
+								<li class="cargo-block__info-item">Тентований</li>
+								<li class="cargo-block__info-item">20 т.</li>
+								<li class="cargo-block__info-item">≈200 км.</li>
+								<li class="cargo-block__info-item">Готівка</li>
+							</ul>
+
+						</div>
+
+						<div class="cargo-block__middle">
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
+							</div>
+
+							<ul class="cargos__decor">
+								<li class="cargos__decor-circle"></li>
+								<li class="cargos__decor-line"></li>
+								<li class="cargos__decor-circle"></li>
+							</ul>
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
 							</div>
 						</div>
 
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg2.webp" alt="Image">
-								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Біржа вантажів</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Маєте власний транспорт але не знаете де знайти вантаж? Наша біржа допоможе вам з цим питанням</p>
-									<a href="" class="btn btn_light service__block-btn">Біржа вантажів</a>
-								</div>
-							</div>
-						</div>
+						<div class="cargo-block__footer">
+							<a href="cargo.html" class="cargo-block__btn">Детальніше</a>
 
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg3.webp" alt="Image">
-								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Новий транспорт</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Хочете здавати транспорт в аренду? Просто додайте його на нашу платформу та очікуйте клієнтів</p>
-									<a href="" class="btn btn_light service__block-btn">Додати транспорт</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="service__slide swiper-slide">
-							<div class="service__block">
-								<div class="service__block-image">
-									<img src="img/serviceSection/serviceBg4.webp" alt="Image">
-								</div>
-								<div class="service__block-inner">
-									<h4 class="service__block-title">Біржа транспорту</h4>
-									<p class="service__block-subtitle">Тип послуги</p>
-									<p class="service__block-description">Хочете знайти транспорт в аренду? Наша транспортна біржа вам швидко та легко з цим питанням</p>
-									<a href="" class="btn btn_light service__block-btn">Біржа транспорту</a>
-								</div>
+							<div class="price">
+								<p class="price__title">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconPrice"></use>
+									</svg>
+									25000₴
+								</p>
+								<p class="price__subtitle">20,8₴ / км.</p>
 							</div>
 						</div>
 
 					</div>
+
+					<div class="cargo-block">
+						<div class="cargo-block__header">
+
+							<div class="cargo-block__header-inner">
+								<p class="cargo-block__title">Медичне обладнання</p>
+
+								<div class="cargo-block__icons">
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconPremiumCargo"></use>
+										</svg>
+									</div>
+
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconUrgent"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<ul class="cargo-block__info-list">
+								<li class="cargo-block__info-item">Тентований</li>
+								<li class="cargo-block__info-item">20 т.</li>
+								<li class="cargo-block__info-item">≈200 км.</li>
+								<li class="cargo-block__info-item">Готівка</li>
+							</ul>
+
+						</div>
+
+						<div class="cargo-block__middle">
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
+							</div>
+
+							<ul class="cargos__decor">
+								<li class="cargos__decor-circle"></li>
+								<li class="cargos__decor-line"></li>
+								<li class="cargos__decor-circle"></li>
+							</ul>
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
+							</div>
+						</div>
+
+						<div class="cargo-block__footer">
+							<a href="cargo.html" class="cargo-block__btn">Детальніше</a>
+
+							<div class="price">
+								<p class="price__title">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconPrice"></use>
+									</svg>
+									25000₴
+								</p>
+								<p class="price__subtitle">20,8₴ / км.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="cargo-block">
+						<div class="cargo-block__header">
+
+							<div class="cargo-block__header-inner">
+								<p class="cargo-block__title">Медичне обладнання</p>
+
+								<div class="cargo-block__icons">
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconPremiumCargo"></use>
+										</svg>
+									</div>
+
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconUrgent"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<ul class="cargo-block__info-list">
+								<li class="cargo-block__info-item">Тентований</li>
+								<li class="cargo-block__info-item">20 т.</li>
+								<li class="cargo-block__info-item">≈200 км.</li>
+								<li class="cargo-block__info-item">Готівка</li>
+							</ul>
+
+						</div>
+
+						<div class="cargo-block__middle">
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
+							</div>
+
+							<ul class="cargos__decor">
+								<li class="cargos__decor-circle"></li>
+								<li class="cargos__decor-line"></li>
+								<li class="cargos__decor-circle"></li>
+							</ul>
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
+							</div>
+						</div>
+
+						<div class="cargo-block__footer">
+							<a href="cargo.html" class="cargo-block__btn">Детальніше</a>
+
+							<div class="price">
+								<p class="price__title">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconPrice"></use>
+									</svg>
+									25000₴
+								</p>
+								<p class="price__subtitle">20,8₴ / км.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="cargo-block">
+						<div class="cargo-block__header">
+
+							<div class="cargo-block__header-inner">
+								<p class="cargo-block__title">Медичне обладнання</p>
+
+								<div class="cargo-block__icons">
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconPremiumCargo"></use>
+										</svg>
+									</div>
+
+									<div class="cargo-block__icon">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#IconUrgent"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<ul class="cargo-block__info-list">
+								<li class="cargo-block__info-item">Тентований</li>
+								<li class="cargo-block__info-item">20 т.</li>
+								<li class="cargo-block__info-item">≈200 км.</li>
+								<li class="cargo-block__info-item">Готівка</li>
+							</ul>
+
+						</div>
+
+						<div class="cargo-block__middle">
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
+							</div>
+
+							<ul class="cargos__decor">
+								<li class="cargos__decor-circle"></li>
+								<li class="cargos__decor-line"></li>
+								<li class="cargos__decor-circle"></li>
+							</ul>
+
+							<div class="cargo-block__location-block">
+								<ul class="cargo-block__location-list">
+									<li class="cargo-block__location-city">Івано-Франківськ</li>
+									<li class="cargo-block__location-region">Івано-Франківська область</li>
+								</ul>
+								<p class="cargo-block__location-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconCargoBlockDate"></use>
+									</svg>
+									06.01.2024
+								</p>
+							</div>
+						</div>
+
+						<div class="cargo-block__footer">
+							<a href="cargo.html" class="cargo-block__btn">Детальніше</a>
+
+							<div class="price">
+								<p class="price__title">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#IconPrice"></use>
+									</svg>
+									25000₴
+								</p>
+								<p class="price__subtitle">20,8₴ / км.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="pagination">
+					<a href="" class="pagination__item">1</a>
+					<a href="" class="pagination__item">2</a>
+					<a href="" class="pagination__item">3</a>
+					<a href="" class="pagination__item">4</a>
+					<p>....</p>
+					<a href="" class="pagination__item">15</a>
 				</div>
 
 			</section>
-
-			<section class="section_offset about about__container">
-				<div class="about__image">
-					<img src="img/aboutSection/about.webp" alt="Image" width="595">
-
-					<div class="about__icon">
-						<span>
-							<svg>
-								<use xlink:href="img/icons/icons.svg#IconCargos"></use>
-							</svg>
-						</span>
-					</div>
-
-				</div>
-				<div class="about__text">
-					<h2 class="about__title">Логістична платформа для сучасного бізнесу</h2>
-					<p class="about__subtitle">Наша платформа революціонізує логістику, швидко й зручно з'єднуючи вантажовідправників і перевізників, спрощуючи організацію перевезень</p>
-
-					<div class="about__description">
-						<div class="about__users">
-							<img src="img/aboutSection/user1.webp" alt="User image">
-							<img src="img/aboutSection/user2.webp" alt="User image">
-							<img src="img/aboutSection/user3.webp" alt="User image">
-							<img src="img/aboutSection/user4.webp" alt="User image">
-						</div>
-
-						<div class="about__rating">
-							<div class="rating">
-								<svg>
-									<use xlink:href="img/icons/icons.svg#IconStar"></use>
-								</svg>
-								<span>4,0</span>
-							</div>
-							<p class="about__rating-title">Оцінка користувачів</p>
-						</div>
-					</div>
-
-					<div class="about__btns">
-						<a href="" class="btn btn_green">Наші послуги</a>
-						<a href="" class="btn btn_light">Про платформу</a>
-					</div>
-
-				</div>
-			</section>
-
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
