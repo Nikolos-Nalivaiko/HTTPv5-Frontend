@@ -3799,7 +3799,22 @@
                 }));
             }));
         }
+        function openFilter() {
+            $(".search__filter").click((function() {
+                $(".filter__form").fadeToggle();
+            }));
+            $(".filter__close").click((function() {
+                $(".filter__form").fadeOut();
+            }));
+        }
+        function closeAlert_close() {
+            $(".alert__btn").click((function() {
+                $(".alert").fadeOut();
+            }));
+        }
         openDropdown();
+        openFilter();
+        closeAlert_close();
         window["FLS"] = true;
         addLoadedClass();
         menuInit();

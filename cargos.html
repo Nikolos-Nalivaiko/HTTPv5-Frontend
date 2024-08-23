@@ -6,10 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240820125936">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240823201725">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?_v=20240823201725"></script>
 </head>
 
 <body>
@@ -182,6 +183,163 @@
 					</a>
 
 				</div>
+
+				<form action="" class="filter__form">
+					<div class="filter__header">
+						<h4>Пошук по філтрам</h4>
+						<div class="filter__close">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#IconClose(Error)"></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="filter__inner">
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Введіть вагу товару, кг</p>
+							<div class="filter__input-block">
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">від</label>
+									<input type="number" class="filter__input">
+								</div>
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">до</label>
+									<input type="number" class="filter__input">
+								</div>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Відстань перевезення, км</p>
+							<div class="filter__input-block">
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">від</label>
+									<input type="number" class="filter__input">
+								</div>
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">до</label>
+									<input type="number" class="filter__input">
+								</div>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Ціна перевезення, грн</p>
+							<div class="filter__input-block">
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">від</label>
+									<input type="number" class="filter__input">
+								</div>
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">до</label>
+									<input type="number" class="filter__input">
+								</div>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Оберіть тип оплати</p>
+							<div class="filter__input-block">
+								<select name="body" id="body" class="select">
+									<option value="" class="select__option" hidden selected></option>
+									<option value="" class="select__option">Тентований</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Оберіть тип кузова</p>
+							<div class="filter__input-block">
+								<select name="body" id="body" class="select">
+									<option value="" class="select__option" hidden selected></option>
+									<option value="" class="select__option">Тентований</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Область завантаження</p>
+							<div class="filter__input-block">
+								<select name="body" id="body" class="select">
+									<option value="" class="select__option" hidden selected></option>
+									<option value="" class="select__option">Тентований</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Місто завантаження</p>
+							<div class="filter__input-block">
+								<select name="body" id="body" class="select">
+									<option value="" class="select__option" hidden selected></option>
+									<option value="" class="select__option">Тентований</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Дата завантаження</p>
+							<div class="filter__input-block">
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">від</label>
+									<input type="date" class="filter__input">
+								</div>
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">до</label>
+									<input type="date" class="filter__input">
+								</div>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Область розвантаження</p>
+							<div class="filter__input-block">
+								<select name="body" id="body" class="select">
+									<option value="" class="select__option" hidden selected></option>
+									<option value="" class="select__option">Тентований</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Місто розвантаження</p>
+							<div class="filter__input-block">
+								<select name="body" id="body" class="select">
+									<option value="" class="select__option" hidden selected></option>
+									<option value="" class="select__option">Тентований</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="filter__input-wrapper">
+							<p for="" class="filter__label-title">Дата розвантаження</p>
+							<div class="filter__input-block">
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">від</label>
+									<input type="date" class="filter__input">
+								</div>
+								<div class="filter__input-inner">
+									<label for="" class="filter__label">до</label>
+									<input type="date" class="filter__input">
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<label class="custom-checkbox filter__checkbox">
+						<input type="checkbox">
+						<span class="checkmark"></span>
+						<span class="checkbox-label">Терміновий вантаж</span>
+					</label>
+
+					<div class="filter__btns">
+						<button type="submit" class="filter__btn btn btn_green">Знайти</button>
+						<button type="reset" class="filter__btn btn btn_light">Скинути фільтри</button>
+					</div>
+
+				</form>
 
 				<h4 class="cargos__title">Знайдені вантажі<span>2,540 вантажа</span></h4>
 
@@ -689,7 +847,7 @@
 			preloader();
 		</script>
 	</div>
-	<script src="js/app.min.js?_v=20240820125936"></script>
+	<script src="js/app.min.js?_v=20240823201725"></script>
 </body>
 
 </html>
