@@ -607,7 +607,7 @@ h4 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #fff;
   z-index: 1000
 }
@@ -2172,6 +2172,11 @@ h4 {
     width: 3.4375rem
   }
 }
+@media (max-width:375px) {
+  .filter__input-block {
+    flex-wrap: wrap
+  }
+}
 @media (max-width:365px) {
   .cargos__title {
     gap: .9375rem
@@ -2852,9 +2857,6 @@ h4 {
   }
   .filter__btn {
     width: 100%
-  }
-  .filter__input-block {
-    flex-wrap: wrap
   }
   .header__btns_mobile {
     flex-direction: column-reverse;
