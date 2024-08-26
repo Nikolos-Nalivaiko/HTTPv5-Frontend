@@ -3812,9 +3812,69 @@
                 $(".alert").fadeOut();
             }));
         }
+        function selectCities_loadCities(regionSelect, citySelect) {
+            var regionId = $(regionSelect).val();
+            var cityOldId = $(citySelect).data("old-city");
+            console.log(cityOldId);
+            $(citySelect).empty().append('<option value="">Виберіть місто</option>').prop("disabled", true);
+            if (regionId) $.ajax({
+                url: "/get/cities",
+                type: "GET",
+                data: {
+                    region_id: regionId
+                },
+                success: function(response) {
+                    if (response && response.cities) {
+                        $.each(response.cities, (function(index, city) {
+                            var selected = city.id == cityOldId ? " selected" : "";
+                            $(citySelect).append('<option value="' + city.id + '"' + selected + ">" + city.name + "</option>");
+                        }));
+                        $(citySelect).prop("disabled", false);
+                    }
+                },
+                error: function(xhr) {
+                    console.error("Помилка при отриманні міст:", xhr.responseText);
+                }
+            });
+        }
+        function attachRegionChangeHandler(regionSelect, citySelect) {
+            $(regionSelect).change((function() {
+                selectCities_loadCities(regionSelect, citySelect);
+            }));
+        }
+        function load() {
+            $("#fileInput").on("change", (function(event) {
+                var input = event.target;
+                var $imageContainer = $(".form-image");
+                $imageContainer.empty().append('<div class="loading-spinner"></div>');
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader;
+                    reader.onload = function(e) {
+                        var imageHtml = `\n                    <img src="${e.target.result}" alt="Image" class="form-image__image">\n                    <div class="form-image__close">\n                        <svg>\n                            <use xlink:href="img/icons/icons.svg#IconClose(Error)"></use>\n                        </svg>\n                    </div>\n                `;
+                        $imageContainer.empty().append(imageHtml);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }));
+            $(document).on("click", ".form-image__close", (function() {
+                var $imageContainer = $(".form-image");
+                $imageContainer.empty();
+                $("#fileInput").val("");
+            }));
+        }
         openDropdown();
         openFilter();
         closeAlert_close();
+        load();
+        attachRegionChangeHandler("#region-select", "#city-select");
+        attachRegionChangeHandler("#region-load-select", "#city-load-select");
+        attachRegionChangeHandler("#region-unload-select", "#city-unload-select");
+        attachRegionChangeHandler("#region-load-select", "#city-load-select");
+        attachRegionChangeHandler("#region-unload-select", "#city-unload-select");
+        attachRegionChangeHandler("#region_id", "#city_id");
+        if ($("#region-load-select").val()) loadCities("#region-load-select", "#city-load-select");
+        if ($("#region-unload-select").val()) loadCities("#region-unload-select", "#city-unload-select");
+        if ($("#region_id").val()) loadCities("#region_id", "#city_id");
         window["FLS"] = true;
         addLoadedClass();
         menuInit();

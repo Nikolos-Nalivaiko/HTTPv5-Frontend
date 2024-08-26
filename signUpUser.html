@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240823203121">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240826114116">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?_v=20240823203121"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?_v=20240826114116"></script>
 </head>
 
 <body>
@@ -59,23 +59,23 @@
 			</div>
 		</div>
 
-		<div class="alert">
-			<div class="alert__content">
-				<div class="alert__text">
-					<div class="alert__icon-wrapper alert__icon-wrapper_success">
-						<div class="alert__icon alert__icon_success">
-							<svg>
-								<use xlink:href="img/icons/icons.svg#IconSuccess"></use>
-							</svg>
-						</div>
-					</div>
-
-					<h4 class="alert__title">Профіль створено</h4>
-					<p class="alert__subtitle">Профіль створено - ви на крок ближче до нових можливостей</p>
-					<button data-close class="alert__btn btn btn_light">Закрити</button>
-				</div>
-			</div>
-		</div>
+		<!-- <div class="alert">
+    <div class="alert__content">
+        <div class="alert__text">
+            <div class="alert__icon-wrapper alert__icon-wrapper_success">
+                <div class="alert__icon alert__icon_success">
+                    <svg>
+                        <use xlink:href="img/icons/icons.svg#IconSuccess"></use>
+                    </svg>
+                </div>
+            </div>
+        
+            <h4 class="alert__title">Профіль створено</h4>
+            <p class="alert__subtitle">Профіль створено - ви на крок ближче до нових можливостей</p>
+            <button data-close class="alert__btn btn btn_light">Закрити</button>
+        </div>
+    </div>
+</div> -->
 		<header class="header">
 			<div class="header__container">
 				<a href="index.html">
@@ -386,6 +386,7 @@
 						<h4 class="create-form__title">Фото профілю</h4>
 
 						<div class="create-form__inputs">
+
 							<div class="file">
 								<label for="fileInput">
 									<div class="file__icon">
@@ -393,19 +394,19 @@
 											<use xlink:href="img/icons/icons.svg#IconUpload"></use>
 										</svg>
 									</div>
-									<input type="file" id="fileInput">
+									<input type="file" id="fileInput" accept="image/*">
 									<span class="file__title">Завантажте фото профілю</span>
 									<span class="file__subtitle">JPG, PNG, WEBP</span>
 								</label>
 							</div>
 
 							<div class="form-image form-image_single">
-								<img src="img/userFormImage.webp" alt="Image" class="form-image__image">
-								<div class="form-image__close">
-									<svg>
-										<use xlink:href="img/icons/icons.svg#IconClose(Error)"></use>
-									</svg>
-								</div>
+								<!-- <img src="img/userFormImage.webp" alt="Image" class="form-image__image">
+                                    <div class="form-image__close">
+                                        <svg>
+                                            <use xlink:href="img/icons/icons.svg#IconClose(Error)"></use>
+                                        </svg>
+                                    </div> -->
 							</div>
 
 						</div>
@@ -586,7 +587,7 @@
 			preloader();
 		</script>
 	</div>
-	<script src="js/app.min.js?_v=20240823203121"></script>
+	<script src="js/app.min.js?_v=20240826114116"></script>
 </body>
 
 </html>
